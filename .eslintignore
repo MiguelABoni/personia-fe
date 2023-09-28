@@ -1,0 +1,10 @@
+dist
+build
+package-lock.json
+node_modules
+coverage
+.husky
+tsconfig.tsbuildinfo
+.env
+.env.local
+.vscode/*

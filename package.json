@@ -1,0 +1,54 @@
+{
+  "name": "personia-fe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FrontEnd development for the Personia project",
+  "keywords": [
+    "personia",
+    "frontend",
+    "react",
+    "vite",
+    "typescript",
+    "material-ui",
+    "axios",
+    "react-query",
+    "jest",
+    "eslint",
+    "standard",
+    "prettier",
+    "conventional-commits"
+  ],
+  "author": "MiguelBedoya IsabelaCeballos",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "standard": "^17.1.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
