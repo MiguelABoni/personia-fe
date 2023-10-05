@@ -12,7 +12,7 @@ This repository contains the code for the PersonIA FrontEnd.
 - Material UI
 - Axios
 - React Query
-- Jest
+- Vitest
 - Eslint
 - Standard
 - Prettier
