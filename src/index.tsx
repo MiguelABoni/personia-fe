@@ -1,5 +1,5 @@
 import { QueryProvider } from './layers/reactQuery/QueryProvider';
-import { Home } from './pages/Home/Home';
+import { PageRoutes } from './pages';
 import { theme } from './theme/theme';
 import { Toaster } from 'sonner';
 import React from 'react';
@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={theme}>
       <QueryProvider>
         <Toaster closeButton position='top-center' richColors />
-        <Home />
+        <PageRoutes />
       </QueryProvider>
     </ThemeProvider>
   </React.StrictMode>,

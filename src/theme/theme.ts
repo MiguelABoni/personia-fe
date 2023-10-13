@@ -4,26 +4,32 @@ export const themeOptions: ThemeOptions = {
   palette: {
     mode: 'light',
     primary: {
-      main: '#3f51b5',
+      main: '#4EA8D3',
     },
     secondary: {
-      main: '#10ffff',
+      main: '#FFBF56',
     },
     error: {
-      main: '#f44336',
-    },
-    warning: {
-      main: '#ff9800',
-    },
-    info: {
-      main: '#2196f3',
+      main: '#E40414',
     },
     success: {
       main: '#4caf50',
     },
+    blueLight: {
+      main: '#CDE9FB',
+    },
+    white: {
+      main: '#FCFCFC',
+    },
+    black: {
+      main: '#1B1B1B',
+    },
+    gray: {
+      main: '#9FA7B2',
+    },
   },
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
+    fontFamily: 'Lato, Arial, sans-serif',
     h1: {
       fontSize: '1.375rem',
       fontWeight: 700,

@@ -3,6 +3,7 @@ import { Home } from './Home';
 import { cleanup, render, screen } from '@testing-library/react';
 import { afterEach, describe, it } from 'vitest';
 
+/** DELETE THIS */
 describe('Home Page', () => {
   afterEach(cleanup);
 
