@@ -1,16 +1,19 @@
+import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
 import { Helmet } from 'react-helmet';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 export const SubTemas = () => {
   return (
-    <Box>
+    <>
       <Helmet>
         <title>PersonIA - SubTemas</title>
         <meta name='description' content='PersonIA - SubTemas' />
       </Helmet>
-      <Typography variant='h1' color='primary'>
-        SubTemas
-      </Typography>
-    </Box>
+      <SectionLayout>
+        <Typography variant='h1' color='secondary'>
+          SubTemas
+        </Typography>
+      </SectionLayout>
+    </>
   );
 };

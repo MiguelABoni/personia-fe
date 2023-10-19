@@ -1,16 +1,19 @@
+import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
 import { Helmet } from 'react-helmet';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
 export const Municipios = () => {
   return (
-    <Box>
+    <>
       <Helmet>
         <title>PersonIA - Municipios</title>
         <meta name='description' content='PersonIA - Municipios' />
       </Helmet>
-      <Typography variant='h1' color='primary'>
-        Municipios
-      </Typography>
-    </Box>
+      <SectionLayout>
+        <Typography variant='h1' color='secondary'>
+          Municipios
+        </Typography>
+      </SectionLayout>
+    </>
   );
 };

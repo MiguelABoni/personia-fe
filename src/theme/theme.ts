@@ -30,6 +30,16 @@ export const themeOptions: ThemeOptions = {
   },
   typography: {
     fontFamily: 'Lato, Arial, sans-serif',
+    superTitle: {
+      fontFamily: 'Lato, Arial, sans-serif',
+      fontSize: '1.75rem',
+      fontWeight: 700,
+    },
+    superText: {
+      fontFamily: 'Lato, Arial, sans-serif',
+      fontSize: '1.25rem',
+      fontWeight: 400,
+    },
     h1: {
       fontSize: '1.375rem',
       fontWeight: 700,
@@ -51,7 +61,7 @@ export const themeOptions: ThemeOptions = {
       fontWeight: 400,
     },
     button: {
-      fontSize: '1rem',
+      fontSize: '1.125rem',
       fontWeight: 500,
     },
   },
