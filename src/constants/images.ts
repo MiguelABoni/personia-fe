@@ -1,6 +1,6 @@
 export const ACERCA_DE_IMAGES = [
   {
-    src: './acerca_de.svg',
+    src: './acercaDe.svg',
     title: 'Acerca De - Personeria de Medellín',
   },
 ];

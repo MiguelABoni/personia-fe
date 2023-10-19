@@ -1,21 +1,12 @@
+import { SX_TITLE_FLAG } from '../../constants/sx/sxTitleFlag';
 import { theme } from '../../theme/theme';
+import { $TitleFlagProps } from './TitleFlag.types';
 import { FC } from 'react';
 import { Stack, Typography } from '@mui/material';
 
-export const TitleFlag: FC<{ title: string }> = ({ title }) => {
+export const TitleFlag: FC<$TitleFlagProps> = ({ title }) => {
   return (
-    <Stack
-      sx={{
-        minWidth: '250px',
-        height: '60px',
-        padding: '1rem',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: '10px',
-        boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
-        backgroundColor: theme.palette.blueLight.main,
-      }}
-    >
+    <Stack sx={SX_TITLE_FLAG.CONTAINER}>
       <Typography variant='h1' sx={{ color: theme.palette.black.main }}>
         {title}
       </Typography>

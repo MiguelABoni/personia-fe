@@ -1,8 +1,11 @@
+import { SectionComponent } from '../../components/SectionComponent/SectionComponent';
+import { CONTENT } from '../../constants/content';
 import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
 import { Helmet } from 'react-helmet';
-import { Typography } from '@mui/material';
+import { Stack, useMediaQuery } from '@mui/material';
 
 export const Municipios = () => {
+  const mediaSM = useMediaQuery('(max-width: 768px)');
   return (
     <>
       <Helmet>
@@ -10,9 +13,16 @@ export const Municipios = () => {
         <meta name='description' content='PersonIA - Municipios' />
       </Helmet>
       <SectionLayout>
-        <Typography variant='h1' color='secondary'>
-          Municipios
-        </Typography>
+        <Stack
+          flexDirection='column'
+          gap={5}
+          padding={mediaSM ? '0 1rem' : '0 4rem'}
+        >
+          <SectionComponent
+            title='Municipios'
+            description={CONTENT.TABLES_DETAIL_DESCRIPTION}
+          />
+        </Stack>
       </SectionLayout>
     </>
   );
