@@ -6,4 +6,7 @@ export const SX_GLOBAL = {
     color: theme.palette.black.main,
     textAlign: 'justify',
   },
+  FONT_SIZE_TEXT_DEFAULT: {
+    fontSize: '1rem',
+  },
 };

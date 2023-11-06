@@ -1,10 +1,11 @@
 import { SectionComponent } from '../../components/SectionComponent/SectionComponent';
 import { CONTENT } from '../../constants/content';
 import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { Stack, useMediaQuery } from '@mui/material';
 
-export const Eventos = () => {
+export const Eventos: FC = () => {
   const mediaSM = useMediaQuery('(max-width: 768px)');
 
   return (

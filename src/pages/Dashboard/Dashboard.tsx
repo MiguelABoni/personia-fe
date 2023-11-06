@@ -1,10 +1,11 @@
 import { CONTENT } from '../../constants/content';
 import { SX_GLOBAL } from '../../constants/sx/sxGlobal';
 import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { Stack, Typography, useMediaQuery } from '@mui/material';
 
-export const DashBoard = () => {
+export const DashBoard: FC = () => {
   const mediaSM = useMediaQuery('(max-width: 768px)');
 
   return (

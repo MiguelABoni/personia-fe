@@ -1,9 +1,9 @@
 export const PATHS = {
   HOME: '/',
-  DASHBOARD: 'dashboard',
-  GRAPHICS: 'graficos',
-  TABLES: 'tablas',
-  ABOUT: 'acercaDe',
+  DASHBOARD: '/dashboard',
+  GRAPHICS: '/graficos',
+  TABLES: '/tablas',
+  ABOUT: '/acercaDe',
 };
 
 export const SECTION_PATHS = {

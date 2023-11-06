@@ -23,4 +23,11 @@ export const SX_ACERCA_DE = {
     minWidth: '350px',
     maxWidth: '500px',
   },
+  BUTTON: (mediaSM: boolean) => ({
+    position: 'fixed',
+    bottom: 0,
+    right: 0,
+    margin: mediaSM ? '1rem' : '2rem',
+    zIndex: 1000,
+  }),
 };

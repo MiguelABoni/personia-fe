@@ -1,12 +1,9 @@
-import { SectionComponent } from '../../components/SectionComponent/SectionComponent';
-import { CONTENT } from '../../constants/content';
+import { ComunasComponent } from '../../components/ComunasComponent/ComunasComponent';
 import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { Stack, useMediaQuery } from '@mui/material';
 
-export const Comunas = () => {
-  const mediaSM = useMediaQuery('(max-width: 768px)');
-
+export const Comunas: FC = () => {
   return (
     <>
       <Helmet>
@@ -14,16 +11,7 @@ export const Comunas = () => {
         <meta name='description' content='PersonIA - Comunas' />
       </Helmet>
       <SectionLayout>
-        <Stack
-          flexDirection='column'
-          gap={5}
-          padding={mediaSM ? '0 1rem' : '0 4rem'}
-        >
-          <SectionComponent
-            title='Comunas'
-            description={CONTENT.TABLES_DETAIL_DESCRIPTION}
-          />
-        </Stack>
+        <ComunasComponent />
       </SectionLayout>
     </>
   );

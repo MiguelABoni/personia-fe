@@ -17,8 +17,6 @@ export const SX_HOME = {
     fontWeight: 'bold',
   },
   BUTTON_SMALL: {
-    flex: 1,
-    minWidth: '200px',
     textTransform: 'capitalize',
     fontWeight: 'bold',
   },
