@@ -5,7 +5,7 @@ import { Box, CircularProgress, Stack } from '@mui/material';
 export const ImageFetchComponent: FC<{
   data: string | null | undefined;
   alt: string;
-  isFetching: boolean;
+  isFetching?: boolean;
   mediaSM?: boolean;
 }> = ({ data, alt, isFetching, mediaSM }) => {
   return (

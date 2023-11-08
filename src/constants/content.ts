@@ -20,6 +20,11 @@ const DESCRIPTION_GRAPHICS_MODAL =
 const TITLE_TABLES_MODAL = 'Elige un año para visualizar las tablas';
 const DESCRIPTION_TABLES_MODAL =
   'Para acceder a la información que deseas, es necesario especificar un año para realizar la consulta de cada una de las tablas';
+const TITLE_STOP_WORDS = 'Stopwords';
+const DESCRIPTION_STOP_WORDS =
+  'Ingresa una palabra que quieras eliminar de la nube de palabras';
+const TITLE_NGRAMAS = 'N-gramas';
+const DESCRIPTION_NGRAMAS = 'Ingresa un número para generar los n-gramas';
 const DASHBOARD_TITLE = 'Dashboard';
 const GRAPHICS_TITLE = 'Gráficos';
 const TABLES_TITLE = 'Tablas';
@@ -40,6 +45,10 @@ export const CONTENT = {
   DESCRIPTION_GRAPHICS_MODAL,
   TITLE_TABLES_MODAL,
   DESCRIPTION_TABLES_MODAL,
+  TITLE_STOP_WORDS,
+  DESCRIPTION_STOP_WORDS,
+  TITLE_NGRAMAS,
+  DESCRIPTION_NGRAMAS,
   DASHBOARD_TITLE,
   GRAPHICS_TITLE,
   TABLES_TITLE,

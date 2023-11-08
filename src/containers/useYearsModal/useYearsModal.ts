@@ -1,5 +1,9 @@
 import { CONTENT } from '../../constants/content';
 import { INITIAL_YEARS } from '../../constants/initialYears';
+import {
+  CSV_GENERATED_SUCCESSFULLY,
+  CSV_GENERATED_UNSUCCESFULLY,
+} from '../../constants/messages';
 import { PATHS } from '../../constants/paths';
 import { getCSV } from '../../services/csv/csv.services';
 import { getYears } from '../../services/years/years.services';
@@ -48,12 +52,10 @@ export const useYearsModal = () => {
 
       if (response.message === 'CSV generated successfully') {
         handleClose();
-        toast.success('Busqueda realizada con éxito');
+        toast.success(CSV_GENERATED_SUCCESSFULLY);
         if (path !== '') navigate(path);
       } else {
-        toast.error(
-          'Error al buscar por el año seleccionado. Intente nuevamente',
-        );
+        toast.error(CSV_GENERATED_UNSUCCESFULLY);
       }
     }
   };
