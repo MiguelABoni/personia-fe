@@ -5,40 +5,40 @@ export const TABLE_SECTIONS = [
     id: 1,
     title: 'Municipios',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Conoce los municipios que han sido más afectados y la cantidad de soluciones que se han podido brindar.',
     path: SECTION_PATHS.MUNICIPIOS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'dialogo.svg',
   },
   {
     id: 2,
     title: 'Comunas',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Conoce las comunas que han sido más afectadas y la cantidad de soluciones que se han podido brindar.',
     path: SECTION_PATHS.COMUNAS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'personal.svg',
   },
   {
     id: 3,
     title: 'Servicios',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Conoce los servicios que han sido atendidos y la cantidad de soluciones que se han podido brindar.',
     path: SECTION_PATHS.SERVICES,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'sede.svg',
   },
   {
     id: 4,
     title: 'Temas',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Conoce los temas más mencionados y la cantidad de soluciones que se han podido brindar.',
     path: SECTION_PATHS.TEMAS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'discurso.svg',
   },
   {
     id: 5,
     title: 'Subtemas',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Conoce los subtemas más mencionados y la cantidad de soluciones que se han podido brindar.',
     path: SECTION_PATHS.SUB_TEMAS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'panorama.svg',
   },
 ];

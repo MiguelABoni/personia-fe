@@ -5,31 +5,31 @@ export const GRAPHIC_SECTIONS = [
     id: 1,
     title: 'Eventos',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Los temas más mencionados sobre vulnerabilidad durante el día y también a lo largo del año.',
     path: SECTION_PATHS.EVENTS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'indicaciones.svg',
   },
   {
     id: 2,
     title: 'Tópicos',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Técnicas para identificar los temas en los casos presentados a la Personería de Medellín.',
     path: SECTION_PATHS.TOPICS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'adopcion.svg',
   },
   {
     id: 3,
     title: 'Ngramas',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Combinaciones de palabras que proporcionn una adecuada comprensión de la información.',
     path: SECTION_PATHS.NGRAMAS,
-    imageUrl: 'acercaDe.svg',
+    imageUrl: 'adulto_mayor.svg',
   },
   {
     id: 4,
     title: 'WordCloud',
     description:
-      'Lorem Ipsum es un texto de marcador de posición comúnmente utilizado en las industrias gráficas, gráficas',
+      'Identificación de palabras importantes con ayuda de elementos visuales y colores atractivos.',
     path: SECTION_PATHS.WORD_CLOUD,
     imageUrl: 'acercaDe.svg',
   },
