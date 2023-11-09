@@ -22,7 +22,7 @@ export const TopicosComponent: FC = () => {
         padding={mediaSM ? '0 1rem' : '0 4rem'}
       >
         <SectionComponent
-          title='Topicos'
+          title='Tópicos'
           description={CONTENT.TOPICS_DESCRIPTION}
         />
       </Stack>
