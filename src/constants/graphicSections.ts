@@ -21,7 +21,7 @@ export const GRAPHIC_SECTIONS = [
     id: 3,
     title: 'Ngramas',
     description:
-      'Combinaciones de palabras que proporcionn una adecuada comprensión de la información.',
+      'Combinaciones de palabras que proporcionan una adecuada comprensión de la información.',
     path: SECTION_PATHS.NGRAMAS,
     imageUrl: 'adulto_mayor.svg',
   },
