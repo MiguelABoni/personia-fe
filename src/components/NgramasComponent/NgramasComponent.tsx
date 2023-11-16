@@ -40,9 +40,6 @@ export const NgramasComponent: FC = () => {
         />
       </Stack>
       <Stack margin='3rem 4rem 2rem 4rem' gap={1}>
-        <Typography variant='h3' sx={{ color: theme.palette.black.main }}>
-          {CONTENT.TITLE_NGRAMAS}
-        </Typography>
         <Typography variant='h4' sx={{ color: theme.palette.black.main }}>
           {CONTENT.DESCRIPTION_NGRAMAS}
         </Typography>

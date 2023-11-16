@@ -1,4 +1,5 @@
 import { CONTENT } from '../../constants/content';
+import { SX_YEARS_MODAL } from '../../constants/sx/sxYearsModal';
 import { useTables } from '../../containers/useTables/useTables';
 import {
   getEventosDia,
@@ -6,10 +7,17 @@ import {
   getEventosSavia,
   getEventosSura,
 } from '../../services/eventos/eventos.services';
+import { theme } from '../../theme/theme';
 import { ImageFetchComponent } from '../ImageFetchComponent/ImageFetchComponent';
 import { SectionComponent } from '../SectionComponent/SectionComponent';
 import { FC } from 'react';
-import { CircularProgress, Stack, useMediaQuery } from '@mui/material';
+import EmojiObjectsRoundedIcon from '@mui/icons-material/EmojiObjectsRounded';
+import {
+  CircularProgress,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from '@mui/material';
 
 export const EventosComponent: FC = () => {
   const mediaSM = useMediaQuery('(max-width: 768px)');
@@ -56,9 +64,21 @@ export const EventosComponent: FC = () => {
           m='2rem 0'
           justifyContent='center'
           alignItems='center'
-          minHeight='250px'
+          gap={5}
+          minHeight='400px'
         >
           <CircularProgress size={40} />
+          <Stack sx={[SX_YEARS_MODAL.WAIT_CONTAINER, { gap: '2rem' }]}>
+            <EmojiObjectsRoundedIcon color='primary' fontSize='large' />
+            <Stack flexDirection='column' gap={1}>
+              <Typography variant='h4' color={theme.palette.black.main}>
+                {CONTENT.WAIT_MESSAGE}
+              </Typography>
+              <Typography variant='h4' color={theme.palette.black.main}>
+                Apreciamos tu paciencia 😊
+              </Typography>
+            </Stack>
+          </Stack>
         </Stack>
       ) : (
         <>

@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const useYearsModal = () => {
+export const useYearsModal = ({ isHeader }: { isHeader: boolean }) => {
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
@@ -27,6 +27,7 @@ export const useYearsModal = () => {
     queryKey: ['years'],
     queryFn: () => getYears(),
     initialData: INITIAL_YEARS,
+    enabled: !isHeader || (isHeader && open),
   });
 
   useEffect(() => {

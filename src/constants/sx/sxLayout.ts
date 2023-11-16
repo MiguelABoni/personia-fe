@@ -1,13 +1,13 @@
 export const SX_LAYOUT = {
   MAIN_CONTAINER: {
-    height: '100vh',
+    height: 'calc(100vh - 78px)',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundImage: 'url(/backgroundTexture.png)',
     backgroundRepeat: 'repeat',
   },
   SECTION_CONTAINER: {
-    minHeight: '100vh',
+    minHeight: 'calc(100vh - 78px)',
     padding: '2rem 0',
     backgroundImage: 'url(/backgroundTexture.png)',
     backgroundRepeat: 'repeat',

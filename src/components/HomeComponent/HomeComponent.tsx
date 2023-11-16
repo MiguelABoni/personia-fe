@@ -28,7 +28,7 @@ export const HomeComponent: FC = () => {
     setPath,
     title,
     description,
-  } = useYearsModal();
+  } = useYearsModal({ isHeader: false });
 
   const handleTablesClick = () => {
     setPath(PATHS.TABLES);

@@ -1,7 +1,10 @@
+import { CONTENT } from '../../constants/content';
 import { SX_GLOBAL } from '../../constants/sx/sxGlobal';
 import { SX_HOME } from '../../constants/sx/sxHome';
 import { SX_YEARS_MODAL } from '../../constants/sx/sxYearsModal';
+import { theme } from '../../theme/theme';
 import { Dispatch, FC, SetStateAction } from 'react';
+import EmojiObjectsRoundedIcon from '@mui/icons-material/EmojiObjectsRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import {
   Modal,
@@ -114,6 +117,29 @@ export const YearsModal: FC<{
           >
             Por favor, necesitas seleccionar un año
           </Typography>
+        )}
+        {isFetching && (
+          <Stack
+            sx={[
+              SX_YEARS_MODAL.WAIT_CONTAINER,
+              {
+                gap: '1rem',
+                padding: '1rem',
+                borderRadius: '10px',
+                bgcolor: theme.palette.blueLight.main,
+              },
+            ]}
+          >
+            <EmojiObjectsRoundedIcon color='primary' fontSize='large' />
+            <Stack flexDirection='column' gap={1}>
+              <Typography variant='h4' color={theme.palette.black.main}>
+                {CONTENT.WAIT_MESSAGE}
+              </Typography>
+              <Typography variant='h4' color={theme.palette.black.main}>
+                Apreciamos tu paciencia 😊
+              </Typography>
+            </Stack>
+          </Stack>
         )}
         <Button
           variant='contained'

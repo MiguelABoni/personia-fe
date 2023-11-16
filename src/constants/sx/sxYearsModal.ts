@@ -14,4 +14,9 @@ export const SX_YEARS_MODAL = {
     backgroundColor: theme.palette.white.main,
     outline: 'none',
   }),
+  WAIT_CONTAINER: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
 };
