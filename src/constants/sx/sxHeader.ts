@@ -19,6 +19,27 @@ export const SX_HEADER = {
     gap: '1rem',
     padding: '.5rem',
   },
+  MOBILE_CONTAINER: {
+    height: '78px',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.palette.primary.main,
+  },
+  TABLET_FIRST_CONTAINER: {
+    height: '78px',
+    flexDirection: 'row',
+    backgroundColor: theme.palette.white.main,
+  },
+  TABLET_SECOND_CONTAINER: {
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: '0 8px 8px 0',
+    padding: '.5rem',
+  },
   TAB: {
     minWidth: '150px',
     marginRight: '1rem',

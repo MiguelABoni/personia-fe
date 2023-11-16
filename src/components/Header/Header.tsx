@@ -3,6 +3,8 @@ import { PATHS } from '../../constants/paths';
 import { SX_HEADER } from '../../constants/sx/sxHeader';
 import { useYearsModal } from '../../containers/useYearsModal/useYearsModal';
 import { theme } from '../../theme/theme';
+import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu';
+import { LogosComponent } from '../LogosComponent/LogosComponent';
 import { YearsModal } from '../YearsModal/YearsModal';
 import { FC } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -12,13 +14,16 @@ import {
   Stack,
   Tab,
   Tabs,
-  Tooltip,
   Typography,
   useMediaQuery,
 } from '@mui/material';
 
 export const Header: FC = () => {
   const mediaSM = useMediaQuery('(max-width: 768px)');
+  const mediaMobile = useMediaQuery('(max-width: 767px)');
+  const mediaTablet = useMediaQuery(
+    '(min-width: 768px) and (max-width: 1023px)',
+  );
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -49,6 +54,81 @@ export const Header: FC = () => {
     setPath(PATHS.TABLES);
     setOpen(true);
   };
+
+  if (mediaMobile) {
+    return (
+      <>
+        <YearsModal
+          title={title}
+          description={description}
+          open={open}
+          year={year}
+          setYear={setYear}
+          yearOptions={yearOptions}
+          error={error}
+          isFetching={isFetching}
+          loadingCSV={loadingCSV}
+          handleSubmit={handleSubmit}
+          handleClose={handleClose}
+          mediaSM={mediaSM}
+        />
+        <AppBar position='static' sx={SX_HEADER.MOBILE_CONTAINER}>
+          <HamburgerMenu
+            handleGraphicsClick={handleGraphicsClick}
+            handleTablesClick={handleTablesClick}
+          />
+          <Typography
+            color={theme.palette.black.main}
+            sx={{
+              fontSize: '2rem',
+              fontWeight: 700,
+            }}
+          >
+            {CONTENT.APP_TITLE}
+          </Typography>
+        </AppBar>
+      </>
+    );
+  }
+
+  if (mediaTablet) {
+    return (
+      <>
+        <YearsModal
+          title={title}
+          description={description}
+          open={open}
+          year={year}
+          setYear={setYear}
+          yearOptions={yearOptions}
+          error={error}
+          isFetching={isFetching}
+          loadingCSV={loadingCSV}
+          handleSubmit={handleSubmit}
+          handleClose={handleClose}
+          mediaSM={mediaSM}
+        />
+        <AppBar position='static' sx={SX_HEADER.TABLET_FIRST_CONTAINER}>
+          <Stack sx={SX_HEADER.TABLET_SECOND_CONTAINER}>
+            <HamburgerMenu
+              handleGraphicsClick={handleGraphicsClick}
+              handleTablesClick={handleTablesClick}
+            />
+            <Typography
+              color={theme.palette.black.main}
+              sx={{
+                fontSize: '2rem',
+                fontWeight: 700,
+              }}
+            >
+              {CONTENT.APP_TITLE}
+            </Typography>
+          </Stack>
+          <LogosComponent sx={SX_HEADER.SECOND_CONTAINER} />
+        </AppBar>
+      </>
+    );
+  }
 
   return (
     <>
@@ -109,47 +189,23 @@ export const Header: FC = () => {
               label='Gráficos'
               value='/graficos'
               component={Button}
-              onClick={handleGraphicsClick}
+              onClick={() => {
+                if (pathname !== PATHS.GRAPHICS) handleGraphicsClick();
+              }}
               sx={SX_HEADER.TAB}
             />
             <Tab
               label='Tablas'
               value='/tablas'
               component={Button}
-              onClick={handleTablesClick}
+              onClick={() => {
+                if (pathname !== PATHS.TABLES) handleTablesClick();
+              }}
               sx={SX_HEADER.TAB}
             />
           </Tabs>
         </Stack>
-        <Stack sx={SX_HEADER.SECOND_CONTAINER}>
-          <Button href='https://www.personeriamedellin.gov.co/' target='_blank'>
-            <Tooltip title='Personería De Medellín'>
-              <img
-                src='../logo_personeria.jpeg'
-                alt='Logo Personeria De Medellín'
-                style={{ width: 50 }}
-              />
-            </Tooltip>
-          </Button>
-          <Button href='https://www.politecnicojic.edu.co/' target='_blank'>
-            <Tooltip title='Politécnico Colombiano Jaime Isaza Cadavid'>
-              <img
-                src='../logo_poli.jpeg'
-                alt='Logo Politécnico Colombiano Jaime Isaza Cadavid'
-                style={{ width: 50 }}
-              />
-            </Tooltip>
-          </Button>
-          <Button href='https://udemedellin.edu.co/' target='_blank'>
-            <Tooltip title='Universidad De Medellín'>
-              <img
-                src='../logo_udem.svg'
-                alt='Logo Universidad De Medellín'
-                style={{ width: 50 }}
-              />
-            </Tooltip>
-          </Button>
-        </Stack>
+        <LogosComponent sx={SX_HEADER.SECOND_CONTAINER} />
       </AppBar>
     </>
   );
