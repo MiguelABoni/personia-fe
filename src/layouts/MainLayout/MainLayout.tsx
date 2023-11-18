@@ -8,11 +8,14 @@ import { Stack, useMediaQuery } from '@mui/material';
 
 export const MainLayout: FC<{ children: ReactElement }> = ({ children }) => {
   const mediaMobile = useMediaQuery('(max-width: 767px)');
+  const mediaTablet = useMediaQuery(
+    '(min-width: 768px) and (max-width: 1023px)',
+  );
 
   return (
     <>
       <Header />
-      <Stack sx={SX_LAYOUT.MAIN_CONTAINER(mediaMobile)}>
+      <Stack sx={SX_LAYOUT.MAIN_CONTAINER(mediaMobile, mediaTablet)}>
         {children}
         <AcercaDeButton />
       </Stack>

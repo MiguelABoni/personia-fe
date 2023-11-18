@@ -44,6 +44,7 @@ export const WordCloudComponent: FC = () => {
         alt='Word Cloud'
         isFetching={isFetching}
         mediaSM={mediaSM}
+        minHeight='200px'
       />
     </>
   );

@@ -11,16 +11,18 @@ export const ImageFetchComponent: FC<{
   alt: string;
   isFetching?: boolean;
   mediaSM?: boolean;
-}> = ({ data, alt, isFetching, mediaSM }) => {
+  minHeight?: string;
+}> = ({ data, alt, isFetching, mediaSM, minHeight }) => {
   return (
     <>
       {isFetching ? (
         <Stack
           m='2rem 0'
+          padding='0 1rem'
           justifyContent='center'
           alignItems='center'
           gap={5}
-          minHeight='400px'
+          minHeight={minHeight || '400px'}
         >
           <CircularProgress size={40} />
           <Stack sx={[SX_YEARS_MODAL.WAIT_CONTAINER, { gap: '2rem' }]}>

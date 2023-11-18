@@ -8,6 +8,7 @@ import { Stack, Typography, useMediaQuery } from '@mui/material';
 
 export const GraficosComponent: FC = () => {
   const mediaSM = useMediaQuery('(max-width: 768px)');
+  const mediaTablet = useMediaQuery('(max-width: 1300px)');
 
   return (
     <>
@@ -31,7 +32,7 @@ export const GraficosComponent: FC = () => {
           {CONTENT.GRAPHICS_DESCRIPTION}
         </Typography>
       </Stack>
-      <Stack sx={SX_GRAPHICS.CONTAINER}>
+      <Stack sx={SX_GRAPHICS.CONTAINER(mediaTablet)}>
         {GRAPHIC_SECTIONS.map((section) => (
           <SectionCard
             key={section.id}

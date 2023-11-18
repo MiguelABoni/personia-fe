@@ -1,14 +1,11 @@
-import { theme } from '../../theme/theme';
-
 export const SX_GRAPHICS = {
-  CONTAINER: {
-    margin: '4rem auto',
-    padding: '2rem 0',
+  CONTAINER: (mediaTablet: boolean) => ({
+    padding: mediaTablet ? '0rem' : '2rem 0',
+    margin: '4rem auto 0rem auto',
     gap: '2rem',
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: theme.palette.blueLight.main,
-  },
+  }),
 };

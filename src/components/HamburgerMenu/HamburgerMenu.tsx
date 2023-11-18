@@ -54,7 +54,7 @@ export const HamburgerMenu: FC<{
             justifyContent: 'space-between',
           }}
         >
-          <Stack gap={3}>
+          <Stack gap={3} marginBottom='24px'>
             <Button
               color='black'
               sx={{

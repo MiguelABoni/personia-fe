@@ -9,6 +9,7 @@ import {
   Button,
   Stack,
   CircularProgress,
+  useMediaQuery,
 } from '@mui/material';
 
 export const StopWordsComponent: FC<{
@@ -26,8 +27,13 @@ export const StopWordsComponent: FC<{
   loadingStopWords,
   disabled,
 }) => {
+  const mediaSM = useMediaQuery('(max-width: 768px)');
+
   return (
-    <Stack margin='3rem 4rem 2rem 4rem' gap={1}>
+    <Stack
+      margin={mediaSM ? '3rem 1rem 2rem 1rem' : '3rem 4rem 2rem 4rem'}
+      gap={1}
+    >
       <Typography variant='h3' sx={{ color: theme.palette.black.main }}>
         {CONTENT.TITLE_STOP_WORDS}
       </Typography>
@@ -57,7 +63,7 @@ export const StopWordsComponent: FC<{
           InputProps={{
             sx: { fontSize: '0.875rem' },
           }}
-          sx={{ margin: '.5rem 0', minWidth: '500px' }}
+          sx={{ margin: '.5rem 0', minWidth: mediaSM ? '350px' : '500px' }}
         />
         <Button
           variant='contained'

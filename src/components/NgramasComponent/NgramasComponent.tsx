@@ -39,7 +39,10 @@ export const NgramasComponent: FC = () => {
           description={CONTENT.N_GRAMAS_DESCRIPTION}
         />
       </Stack>
-      <Stack margin='3rem 4rem 2rem 4rem' gap={1}>
+      <Stack
+        margin={mediaSM ? '3rem 1rem 2rem 1rem' : '3rem 4rem 2rem 4rem'}
+        gap={1}
+      >
         <Typography variant='h4' sx={{ color: theme.palette.black.main }}>
           {CONTENT.DESCRIPTION_NGRAMAS}
         </Typography>
@@ -67,7 +70,7 @@ export const NgramasComponent: FC = () => {
             InputProps={{
               sx: { fontSize: '0.875rem' },
             }}
-            sx={{ margin: '.5rem 0', minWidth: '500px' }}
+            sx={{ margin: '.5rem 0', minWidth: mediaSM ? '350px' : '500px' }}
           />
           <Button
             variant='contained'
@@ -96,6 +99,7 @@ export const NgramasComponent: FC = () => {
         alt='Ngramas'
         isFetching={loadingNgramas && !image}
         mediaSM={mediaSM}
+        minHeight='200px'
       />
     </>
   );
