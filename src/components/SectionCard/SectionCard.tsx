@@ -12,9 +12,16 @@ export const SectionCard: FC<{
 }> = ({ title, description, path, imageUrl }) => {
   return (
     <Link to={path} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <Stack sx={SX_SECTION_CARD.FIRST_CONTAINER(imageUrl)}>
+      <Stack
+        data-testid={`card-${title}`}
+        sx={SX_SECTION_CARD.FIRST_CONTAINER(imageUrl)}
+      >
         <Stack sx={SX_SECTION_CARD.SECOND_CONTAINER}>
-          <Typography variant='h3' sx={SX_GLOBAL.CENTER_TEXT}>
+          <Typography
+            variant='h3'
+            data-testid={`card-${title}-title`}
+            sx={SX_GLOBAL.CENTER_TEXT}
+          >
             {title}
           </Typography>
           <Typography variant='h4' sx={SX_GLOBAL.CENTER_TEXT}>

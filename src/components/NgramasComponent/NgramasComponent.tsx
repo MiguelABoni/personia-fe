@@ -73,6 +73,7 @@ export const NgramasComponent: FC = () => {
             sx={{ margin: '.5rem 0', minWidth: mediaSM ? '350px' : '500px' }}
           />
           <Button
+            data-testid='generate-ngramas-button'
             variant='contained'
             color='primary'
             startIcon={

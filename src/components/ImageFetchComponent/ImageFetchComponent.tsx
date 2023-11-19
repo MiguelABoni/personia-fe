@@ -17,6 +17,7 @@ export const ImageFetchComponent: FC<{
     <>
       {isFetching ? (
         <Stack
+          data-testid='loading-image'
           m='2rem 0'
           padding='0 1rem'
           justifyContent='center'
@@ -41,6 +42,7 @@ export const ImageFetchComponent: FC<{
         data && (
           <Box sx={SX_IMAGE_FETCH_COMPONENT.CONTAINER(mediaSM)}>
             <img
+              data-testid={`image-${alt}`}
               src={data}
               alt={alt}
               style={{ width: '100%', height: 'auto' }}

@@ -78,6 +78,7 @@ export const Header: FC = () => {
             handleTablesClick={handleTablesClick}
           />
           <Typography
+            data-testid='app-title'
             color={theme.palette.black.main}
             sx={{
               fontSize: '2rem',
@@ -115,6 +116,7 @@ export const Header: FC = () => {
               handleTablesClick={handleTablesClick}
             />
             <Typography
+              data-testid='app-title'
               color={theme.palette.black.main}
               sx={{
                 fontSize: '2rem',
@@ -152,6 +154,7 @@ export const Header: FC = () => {
       >
         <Stack sx={SX_HEADER.FIRST_CONTAINER}>
           <Typography
+            data-testid='app-title'
             color={theme.palette.black.main}
             sx={{
               marginLeft: '1rem',

@@ -17,7 +17,11 @@ export const TablasComponent: FC = () => {
         gap={5}
         padding={mediaSM ? '0 1rem' : '0 4rem'}
       >
-        <Typography variant='h1' sx={SX_GLOBAL.CENTER_TEXT}>
+        <Typography
+          variant='h1'
+          data-testid='tablas-title'
+          sx={SX_GLOBAL.CENTER_TEXT}
+        >
           {CONTENT.TABLES_TITLE}
         </Typography>
         <Typography

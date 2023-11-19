@@ -26,6 +26,7 @@ export const AcercaDeComponent: FC = () => {
             {ACERCA_DE_IMAGES.map((item) => (
               <ImageListItem key={item.src}>
                 <img
+                  data-testid={`image-${item.title}`}
                   srcSet={`${item.src}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.src}?w=164&h=164&fit=crop&auto=format`}
                   alt={item.title}

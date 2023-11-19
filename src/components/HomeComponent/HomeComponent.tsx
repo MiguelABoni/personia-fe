@@ -57,7 +57,11 @@ export const HomeComponent: FC = () => {
         mediaSM={mediaSM}
       />
       <Stack sx={SX_HOME.FIRST_CONTAINER}>
-        <Typography variant='superTitle' sx={SX_GLOBAL.CENTER_TEXT}>
+        <Typography
+          data-testid='home-title'
+          variant='superTitle'
+          sx={SX_GLOBAL.CENTER_TEXT}
+        >
           {CONTENT.HOME_TITLE}
         </Typography>
         <Typography variant='superText' sx={SX_GLOBAL.CENTER_TEXT}>
@@ -66,6 +70,7 @@ export const HomeComponent: FC = () => {
         <Stack sx={SX_HOME.SECOND_CONTAINER}>
           <Link to={PATHS.DASHBOARD}>
             <Button
+              data-testid='dashboard-button'
               variant='contained'
               color='primary'
               startIcon={<DashboardRoundedIcon />}
@@ -80,6 +85,7 @@ export const HomeComponent: FC = () => {
           </Link>
           <Stack sx={SX_HOME.THIRD_CONTAINER}>
             <Button
+              data-testid='graphics-button'
               variant='contained'
               color='secondary'
               startIcon={<LeaderboardRoundedIcon />}
@@ -93,6 +99,7 @@ export const HomeComponent: FC = () => {
               {CONTENT.GRAPHICS_TITLE}
             </Button>
             <Button
+              data-testid='tables-button'
               variant='contained'
               color='secondary'
               startIcon={<TableChartRoundedIcon />}

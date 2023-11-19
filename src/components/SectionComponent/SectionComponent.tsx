@@ -17,7 +17,11 @@ export const SectionComponent: FC<$SectionComponentProps> = (props) => {
   return (
     <Stack sx={SX_SECTION_COMPONENT.CONTAINER(mediaSM)}>
       <Stack direction='row' gap='20px'>
-        <Button sx={{ borderRadius: '10px' }} onClick={goBack}>
+        <Button
+          data-testid='back-button'
+          sx={{ borderRadius: '10px' }}
+          onClick={goBack}
+        >
           <ArrowBackRoundedIcon
             sx={{
               fontSize: '50px',

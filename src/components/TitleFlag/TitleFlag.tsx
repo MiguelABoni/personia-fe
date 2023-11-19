@@ -7,7 +7,11 @@ import { Stack, Typography } from '@mui/material';
 export const TitleFlag: FC<$TitleFlagProps> = ({ title }) => {
   return (
     <Stack sx={SX_TITLE_FLAG.CONTAINER}>
-      <Typography variant='h1' sx={{ color: theme.palette.black.main }}>
+      <Typography
+        variant='h1'
+        data-testid={`title-${title}`}
+        sx={{ color: theme.palette.black.main }}
+      >
         {title}
       </Typography>
     </Stack>
