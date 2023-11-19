@@ -62,6 +62,7 @@ export const EventosComponent: FC = () => {
       isFetchingEventosSavia ? (
         <Stack
           m='2rem 0'
+          padding='0 1rem'
           justifyContent='center'
           alignItems='center'
           gap={5}
