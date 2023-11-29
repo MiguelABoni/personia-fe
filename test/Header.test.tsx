@@ -17,7 +17,7 @@ describe('Pagina - Header', () => {
     );
   });
 
-  it('Debería mostrar el titulo de la aplicación "Person_IA"', () => {
+  it('Debería mostrar el titulo de la aplicación "PersonIA"', () => {
     const { getByTestId } = render(
       <RouterComponent>
         <Route path={PATHS.HOME} element={<Header />} />

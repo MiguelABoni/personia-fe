@@ -1,4 +1,4 @@
-const APP_TITLE = 'Person_IA';
+const APP_TITLE = 'PersonIA';
 const HOME_TITLE = `Accede a detalles clave sobre los casos de vulnerabilidad que se presentan en Medellín`;
 const HOME_DESCRIPTION = `Esta herramienta implementa Inteligencia de Negocios, Analítica de
 Datos e Inteligencia Artificial y fue creada para apoyar a la Personería de Medellín
