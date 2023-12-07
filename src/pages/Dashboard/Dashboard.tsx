@@ -1,12 +1,10 @@
-import { CONTENT } from '../../constants/content';
-import { SX_GLOBAL } from '../../constants/sx/sxGlobal';
 import { SectionLayout } from '../../layouts/SectionLayout/SectionLayout';
 import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { Stack, Typography, useMediaQuery } from '@mui/material';
+import { Stack, useMediaQuery } from '@mui/material';
 
 export const DashBoard: FC = () => {
-  const mediaSM = useMediaQuery('(max-width: 768px)');
+  const mediaMobile = useMediaQuery('(max-width: 767px)');
 
   return (
     <>
@@ -16,13 +14,21 @@ export const DashBoard: FC = () => {
       </Helmet>
       <SectionLayout>
         <Stack
-          flexDirection='column'
-          gap={5}
-          padding={mediaSM ? '0 1rem' : '0 4rem'}
+          sx={{
+            width: '100%',
+            height: mediaMobile ? 'calc(100vh - 252px)' : 'calc(100vh - 174px)',
+          }}
         >
-          <Typography variant='h1' sx={SX_GLOBAL.CENTER_TEXT}>
-            {CONTENT.DASHBOARD_TITLE}
-          </Typography>
+          <iframe
+            title='Personeria_Medellin_V3'
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+            }}
+            src='https://app.powerbi.com/view?r=eyJrIjoiYWRlMDcyMDktNzgxNi00MWEzLWJmOTMtZDliNThiZGQ5NWQyIiwidCI6ImYwZGU1ZmEyLWU4MWYtNGJhMC1hNWFiLTJjNmI4ODkyOWM5NiJ9'
+            allowFullScreen={true}
+          ></iframe>
         </Stack>
       </SectionLayout>
     </>
